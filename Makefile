@@ -21,4 +21,4 @@ build: download
 download:
 	cd /tmp && curl -Lo postgres_exporter.tar.gz https://github.com/wrouesnel/postgres_exporter/releases/download/v$(VERSION)/postgres_exporter_v$(VERSION)_linux-amd64.tar.gz
 	cd /tmp && tar -xvzf /tmp/postgres_exporter.tar.gz && mv postgres_exporter_v$(VERSION)_linux-amd64 postgres_exporter
-	chmod +x postgres_exporter/postgres_exporter
+	cd /tmp && chmod +x postgres_exporter/postgres_exporter
