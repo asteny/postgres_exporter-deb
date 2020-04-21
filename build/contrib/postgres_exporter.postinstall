@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DESC="Prometheus exporter for PostgreSQL server metrics"
+
+mkdir -p /etc/postgres_exporter
+/bin/systemctl daemon-reload
+
+exit 0
+

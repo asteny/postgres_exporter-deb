@@ -1,0 +1,31 @@
+#!/bin/bash
+
+DESC="Prometheus exporter for PostgreSQL server metrics"
+
+
+case "$1" in
+  remove)
+    /bin/systemctl stop postgres_exporter
+  ;;
+
+  upgrade)
+    /bin/systemctl restart postgres_exporter
+  ;;
+
+  purge)
+    /bin/rm -fr /etc/default/postgres_exporter /etc/postgres_exporter /usr/bin/postgres_exporter
+  ;;
+
+  remove|failed-upgrade|abort-install|abort-upgrade|disappear)
+    /bin/systemctl restart postgres_exporter
+    exit 0
+  ;;
+
+  *)
+    echo "postrm called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+
+esac
+
+exit 0

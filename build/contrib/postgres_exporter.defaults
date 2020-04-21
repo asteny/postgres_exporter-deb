@@ -1,0 +1,4 @@
+CMD_OPTS='--log.format="logger:stdout?json=false" --log.level="info"'
+PG_EXPORTER_WEB_LISTEN_ADDRESS=":9187"
+DATA_SOURCE_NAME="postgresql://login:password@hostname:port/dbname?sslmode=disable"
+GOMAXPROCS=4
