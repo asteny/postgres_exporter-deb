@@ -11,7 +11,7 @@ RestartSec=5
 StartLimitInterval=0
 StartLimitBurst=99999
 EnvironmentFile=-/etc/default/postgres_exporter
-ExecStart=/usr/bin/promxy $CMD_OPTS
+ExecStart=/usr/bin/postgres_exporter $CMD_OPTS
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGINT
 
