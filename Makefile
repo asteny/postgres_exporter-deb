@@ -18,6 +18,6 @@ compress: download
 	upx /tmp/postgres_exporter/postgres_exporter
 
 download:
-	cd /tmp && curl -Lo postgres_exporter.tar.gz https://github.com/wrouesnel/postgres_exporter/releases/download/v$(VERSION)/postgres_exporter_v$(VERSION)_linux-amd64.tar.gz
-	cd /tmp && tar -xvzf /tmp/postgres_exporter.tar.gz && mv postgres_exporter_v$(VERSION)_linux-amd64 postgres_exporter
+	cd /tmp && curl -Lo postgres_exporter.tar.gz https://github.com/prometheus-community/postgres_exporter/releases/download/v$(VERSION)/postgres_exporter-$(VERSION).linux-amd64.tar.gz
+	cd /tmp && tar -xvzf /tmp/postgres_exporter.tar.gz && mv postgres_exporter-$(VERSION).linux-amd64 postgres_exporter
 	cd /tmp && chmod +x postgres_exporter/postgres_exporter
